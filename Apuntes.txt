@@ -1,0 +1,37 @@
+Gracias por ver el tutorial, espero que te haya servido!
+https://youtu.be/9M69JOAyIaw
+
+https://blog.postman.com/looping-through-a-data-file-in-the-postman-collection-runner/
+
+https://learning.postman.com/docs/sending-requests/variables/
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+En este tutorial aprenderemos como instalar:
+.NodeJS.
+.Npm.
+.Newman.
+.Exportar collections y environments de Postman.
+.Instalar los reporters HTML de Newman.
+.Ejecutar en CMD una collection y que se guarde en un HTML personalizando el environment y el numero de iteraciones.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Links y anotaciones:
+
+.Para descargar NodeJS:
+https://nodejs.org/es/download/
+
+.Comandos para ver versión de node y npm:
+node -v
+npm -v
+
+.Ejecutar en CMD la collection:
+newman run (nombre de tu colección) -e (nombre de tu entorno) -n (numero de iteracciones) -r htmlextra
+El archivo se guarda en la carpeta newman dentro de la carpeta donde esta la colección.
+
+No te olvides de comentar y dejar un like si te sirvió!
+
+****comando para ejecutar servicio***
+ruta + newman run ReqRes.postman_collection.json -d users.csv --folder "Create Users" -e prod.postman_environment.json -r htmlextra
+
+C:\Users\Juanc\OneDrive\Documents\Redeban\pruebas postman\portabilidad>newman run Api.postman_collection -d registrePortabilidad.csv
+ --folder "registrePortabilidad" -e Scotiabank.postman_environment.json -r htmlextra
