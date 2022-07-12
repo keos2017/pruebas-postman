@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Communications",
+			"name": "validate",
 			"item": [
 				{
 					"name": "ExchangeKey",
@@ -68,47 +68,6 @@
 					"response": []
 				},
 				{
-					"name": "clientHello",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNTIyMDEsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE1NTgwMSwiaWF0IjoxNjM5MTUyMjAxLCJ2ZXJzaW9uIjoyLCJqdGkiOiJmZDdlZWRhZi1jODVhLTQ1ZTItOGZkZi0zY2QxZjVhYTMzMDkiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.If3JH0aBsT7JsbBlSDNp0-Zigp2YSonjpyqHx4tjQ3Jm-OILy-qIRhuudPU6Xk9X2PW8kNDv5-UFHRx0BSbZ0cgqMjszusKmrhDwJUD6051kJPVwkr3U5u1opOS_HRqIQb63mOwd7ZzT8lNM-lFhlKuR6AGXTBcQQ8aNMH1NtlJkIBn-4a3RCEW9O_ubdxq4wBYI2qxTGAhRKD8MJa0GxQJgkNPsAbiP8NI50gn3AG9Ec2xfz1ruFlYUlGES693Pd8NirAuoDRem8O2ZV5APu9BJIrwY4WX2uw8OpAwLfvQCldknGVBiVqH3Srz-V7yGy818Vsmr1P-mJo6UAyZX-g",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"applicationCode\": \"rbm-instant-payments\",\r\n  \"applicationId\": \"com.valid.instant\",\r\n  \"applicationVersion\": \"1.0.0\",\r\n  \"channelType\": \"MOBILE\",\r\n  \"deviceId\": \"string\",\r\n  \"osType\": \"ANDROID\",\r\n  \"sdkVersion\": \"string\",\r\n  \"sessionId\": \"16391521792837654347957889481607\"\r\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-communications/api/auth/clientHello",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-communications",
-								"api",
-								"auth",
-								"clientHello"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Token Cognito",
 					"event": [
 						{
@@ -152,184 +111,6 @@
 								"api",
 								"auth",
 								"tokenCognito"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "closeSession",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNTIyMDEsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE1NTgwMSwiaWF0IjoxNjM5MTUyMjAxLCJ2ZXJzaW9uIjoyLCJqdGkiOiJmZDdlZWRhZi1jODVhLTQ1ZTItOGZkZi0zY2QxZjVhYTMzMDkiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.If3JH0aBsT7JsbBlSDNp0-Zigp2YSonjpyqHx4tjQ3Jm-OILy-qIRhuudPU6Xk9X2PW8kNDv5-UFHRx0BSbZ0cgqMjszusKmrhDwJUD6051kJPVwkr3U5u1opOS_HRqIQb63mOwd7ZzT8lNM-lFhlKuR6AGXTBcQQ8aNMH1NtlJkIBn-4a3RCEW9O_ubdxq4wBYI2qxTGAhRKD8MJa0GxQJgkNPsAbiP8NI50gn3AG9Ec2xfz1ruFlYUlGES693Pd8NirAuoDRem8O2ZV5APu9BJIrwY4WX2uw8OpAwLfvQCldknGVBiVqH3Srz-V7yGy818Vsmr1P-mJo6UAyZX-g",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"sessionId\": \"16391521792837654347957889481607\"\r\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-communications/api/auth/closeSession",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-communications",
-								"api",
-								"auth",
-								"closeSession"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Person",
-			"item": [
-				{
-					"name": "register",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Accept",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Authorization",
-								"value": "{{accessToken}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"fiid\": 23,\r\n  \"portabilityCode\": \"300633\",\r\n  \"person\": {\r\n    \"address\": {\r\n       \"province\": 11,\r\n       \"town\": 12,\r\n       \"type\": \"CMO\",\r\n       \"door\": \"1\",\r\n       \"floor\": \"1\",\r\n       \"name\": \"Suba\",\r\n       \"number\": null,\r\n       \"portal\": \"12\",\r\n       \"stairs\": \"15\",\r\n       \"zipCode\": \"23658\"\r\n    },\r\n    \"email\": \"PruebaRobot1@valid.com\",\r\n    \"iban\": \"20_668224591\",\r\n    \"idNumber\": \"1014443281\",\r\n    \"idType\": 1,\r\n    \"lastName1\": \"paz\",\r\n    \"lastName2\": \"Mora\",\r\n    \"name\": \"Liliana\",\r\n    \"phone\": \"+573522355799\",\r\n    \"status\": 1\r\n  },\r\n\r\n  \"sessionId\": {{sessionId}},\r\n  \"version\": 2\r\n}\r\n"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-person/api/person/register",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-person",
-								"api",
-								"person",
-								"register"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": "",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "queryByPerson",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
-								"key": "Authorization",
-								"value": "{{accessToken}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"fiid\": 23,\r\n  \"phone\": \"+573522355709\",\r\n  \"sessionId\": {{sessionId}}\r\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-person/api/person/queryByPerson",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-person",
-								"api",
-								"person",
-								"queryByPerson"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{accessToken}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"fiid\": 23,\r\n    \"newIban\": \"20_96009999110\",\r\n    \"person\": {\r\n        \"phone\": \"+573522355709\",\r\n        \"iban\": \"20_668224594\",\r\n        \"idType\": 1,\r\n        \"idNumber\": \"1014443286\",\r\n        \"name\": \"Lorena\",\r\n        \"lastName1\": \"Perez\",\r\n        \"lastName2\": \"Porras\",\r\n        \"email\": \"pruebarobot@valid.com\",\r\n        \"status\": 1,\r\n        \"address\": {\r\n            \"province\": 11,\r\n            \"town\": 12,\r\n            \"type\": \"CMO\",\r\n            \"door\": \"1\",\r\n            \"floor\": \"1\",\r\n            \"name\": \"Suba\",\r\n            \"number\": null,\r\n            \"portal\": \"12\",\r\n            \"stairs\": \"15\",\r\n            \"zipCode\": \"23658\"\r\n        }\r\n    },\r\n    \"sessionId\": {{sessionId}}\r\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-person/api/person/update",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-person",
-								"api",
-								"person",
-								"update"
 							]
 						}
 					},
@@ -394,35 +175,179 @@
 						}
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "queyByPerson",
+			"item": [
+				{
+					"name": "ExchangeKey",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Check if status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if response has format JSON\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"postman.setEnvironmentVariable(\"sessionId\", JSON.parse(responseBody).response.sessionId);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"publicKey\": \"-----BEGIN PUBLIC KEY-----\\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKgkX8l6mQr9gNyabAztYTfSFg\\ns2NegXTtykMVKzeaXUud2OCPDUiPFRrN2OLpsr1iJ+0zw3a71JFG/qD0WbRFWZkn\\nNBTcnp2e/ZwpkXe3/Six3hwwzHtEiVy6dnZEympUx5pys88TAVhbPrQG4YK0HMTU\\np+DOqXCsobTh4R1s1QIDAQAB\\n-----END PUBLIC KEY-----\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/rbm-instant-payments-communications/auth/exchangeKey/",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"rbm-instant-payments-communications",
+								"auth",
+								"exchangeKey",
+								""
+							]
+						}
+					},
+					"response": []
 				},
 				{
-					"name": "updateTermConds",
+					"name": "Token Cognito",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Check if status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if response has format JSON\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"postman.setEnvironmentVariable(\"accessToken\", JSON.parse(responseBody).response.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"authorization\": \"Basic NDdlaXFibm50YXI1MGtvMzA4ZDJqbWltOXI6ZmRtNnJpZHFuMmplOGFhaWtwbGZmaDVyam1mODdmZWJuaG1lYmpvNnEydHRmdGlpNnJx\",\r\n    \"sessionId\": \"{{sessionId}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/rbm-instant-payments-communications/api/auth/tokenCognito",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"rbm-instant-payments-communications",
+								"api",
+								"auth",
+								"tokenCognito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "queryByPerson",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check if status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if response has format JSON\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
-							"type": "basic"
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{accessToken}}",
+									"type": "string"
+								}
+							]
 						},
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2NTU4MjQ4NzIsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTY1NTgyODQ3MiwiaWF0IjoxNjU1ODI0ODcyLCJ2ZXJzaW9uIjoyLCJqdGkiOiI3ZTdlZTA2Mi1mMzc1LTRhMjgtOGEzYS03ZDExMzIyNWY1MmQiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.RbHADzoTC4Zt34MgwJkSx2HPLaHlQLncDul8VKxCUlV0kNQpUEOBM4tfUr8EFwJ0ONPOXqug4QB5NthllWzsSd-n_zkfINlUoBEK1ceth06JotzoIK_IGTFZrgQwI-eCobCwCHLOXux7XZzgytsggpTLTsk9W7_bY-RR9FmmTR0KpGPDeJtkouwJ2UtyGbSqrL049drtvQVydaEt3XtW2kojAPwUBsgiXuUu9iyTpqvXK7AoubDtzJBYQJi1LeFUaPl425kbY8aSUt6RO0MHyJW296H_e2GYuBg59Bja-i-_R2IIPVisDyI4QhMqTzIS0UGAlBmIa_8uMAwpv94TEA",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\r\n  \"phone\": \"+573507834130\",\r\n  \"sessionId\": {{sessionId}},\r\n  \"version\": 2\r\n}"
+							"raw": "{\r\n    \"sessionId\": \"{{sessionId}}\",\r\n    \"fiid\": {{fiid}},\r\n    \"phone\": \"{{phone}}\"\r\n}"
 						},
 						"url": {
-							"raw": "{{URL}}/rbm-instant-payments-person/person/updateTermConds",
+							"raw": "{{URL_BASE}}/rbm-instant-payments-person/api/person/queryByPerson",
 							"host": [
-								"{{URL}}"
+								"{{URL_BASE}}"
 							],
 							"path": [
 								"rbm-instant-payments-person",
+								"api",
 								"person",
-								"updateTermConds"
+								"queryByPerson"
 							]
 						}
 					},
@@ -431,941 +356,142 @@
 			]
 		},
 		{
-			"name": "Comercios",
+			"name": "registre",
 			"item": [
 				{
-					"name": "Enrollment",
-					"item": [
-						{
-							"name": "Validación comercio",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{accessToken}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "Bearer eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzE5MDkzOTQsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzMTkxMjk5NCwiaWF0IjoxNjMxOTA5Mzk0LCJ2ZXJzaW9uIjoyLCJqdGkiOiI1YzRiYmI1OC0wNjQ0LTQ4NDEtODQwMy01ZTkyNDAyZTcyODYiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.HM2qoNl3i7Gi-ZM8xFEFz8xdmkH4ia-QEE3L5QCA1xfz_qy7xHxzpS8cikvpDgRPTMUrNJm1qdE0uu3UJ0OppSInl_OfW_lz0GAR1kR48fzj3h7V6QsH9S0a1M9dS8mK8G5_3KksztS0_i7dw10_0ArFvYy2NSCw0Bh7dTqSDQ0A3-gIwcqNrikSD-9613qA9ZtqbbghJ_rWA11G0acTBjRnHpthlVwPeZV7ztJaRq8w0fdWPTLhhZUQlLzu7pjK04WH5-hZhxhCmwfV86bMgwO4yBhDmiqv6wlJVT0QtCDXPVIKA31mlNirJTjhVRgrtPH1dEaMhYlG10TXjzrVsA",
-										"type": "text",
-										"disabled": true
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{    \r\n  \"queryType\": \"full\",\r\n  \"sessionId\": {{sessionId}},\r\n  \"enrollment\": {\r\n    \"date\": \"2022-06-03 12:45:45\",\r\n    \"ip\": \"192.168.7.90\",\r\n    \"origin\": \"1\",\r\n    \"user\": \"comercio\"\r\n  },\r\n  \"queryData\": {\r\n    \"fiid\": null,\r\n    \"idNumber\": \"860060662\",\r\n    \"idType\": null,\r\n    \"typeBusiness\": null,\r\n    \"uniqueCode\": null\r\n      }\r\n}\r\n\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL_BASE}}/rbm-instant-payments-merchant/api/register/consultCommerce",
-									"host": [
-										"{{URL_BASE}}"
-									],
-									"path": [
-										"rbm-instant-payments-merchant",
-										"api",
-										"register",
-										"consultCommerce"
-									]
-								}
-							},
-							"response": [
-								{
-									"name": "Validación comercio",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json",
-												"type": "text"
-											},
-											{
-												"key": "Authorization",
-												"value": "Bearer eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzE5MDkzOTQsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzMTkxMjk5NCwiaWF0IjoxNjMxOTA5Mzk0LCJ2ZXJzaW9uIjoyLCJqdGkiOiI1YzRiYmI1OC0wNjQ0LTQ4NDEtODQwMy01ZTkyNDAyZTcyODYiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.HM2qoNl3i7Gi-ZM8xFEFz8xdmkH4ia-QEE3L5QCA1xfz_qy7xHxzpS8cikvpDgRPTMUrNJm1qdE0uu3UJ0OppSInl_OfW_lz0GAR1kR48fzj3h7V6QsH9S0a1M9dS8mK8G5_3KksztS0_i7dw10_0ArFvYy2NSCw0Bh7dTqSDQ0A3-gIwcqNrikSD-9613qA9ZtqbbghJ_rWA11G0acTBjRnHpthlVwPeZV7ztJaRq8w0fdWPTLhhZUQlLzu7pjK04WH5-hZhxhCmwfV86bMgwO4yBhDmiqv6wlJVT0QtCDXPVIKA31mlNirJTjhVRgrtPH1dEaMhYlG10TXjzrVsA",
-												"type": "text",
-												"disabled": true
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{    \r\n  \"queryType\": \"full\",\r\n  \"sessionId\": \"16515031276067492325774011616370\",\r\n  \"enrollment\": {\r\n    \"date\": \"2022-05-02 10:12:45\",\r\n    \"ip\": \"192.168.7.90\",\r\n    \"origin\": \"1\",\r\n    \"user\": \"comercio\"\r\n  },\r\n  \"queryData\": {\r\n    \"fiid\": \"0002\",\r\n    \"idNumber\": \"114191471212\",\r\n    \"idType\": 5,\r\n    \"typeBusiness\": \"juridica\",\r\n    \"uniqueCode\": \"919754605\"\r\n      }\r\n}\r\n\r\n",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{URL_TEST}}/rbm-instant-payments-merchant/api/register/consultCommerce",
-											"host": [
-												"{{URL_TEST}}"
-											],
-											"path": [
-												"rbm-instant-payments-merchant",
-												"api",
-												"register",
-												"consultCommerce"
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Date",
-											"value": "Mon, 02 May 2022 15:37:58 GMT"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Server",
-											"value": "Apache/2.4.18 (Ubuntu)"
-										},
-										{
-											"key": "Strict-Transport-Security",
-											"value": "max-age=31536000; includeSubDomains; preload"
-										},
-										{
-											"key": "Access-Control-Allow-Methods",
-											"value": "POST, GET, OPTIONS, DELETE, PUT, PATCH"
-										},
-										{
-											"key": "X-Application-Context",
-											"value": "rbm-instant-payments-merchant:dev:8085"
-										},
-										{
-											"key": "X-Content-Type-Options",
-											"value": "nosniff"
-										},
-										{
-											"key": "X-XSS-Protection",
-											"value": "1; mode=block"
-										},
-										{
-											"key": "Cache-Control",
-											"value": "no-cache, no-store, max-age=0, must-revalidate"
-										},
-										{
-											"key": "Pragma",
-											"value": "no-cache"
-										},
-										{
-											"key": "Expires",
-											"value": "0"
-										},
-										{
-											"key": "X-Frame-Options",
-											"value": "DENY"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Access-Control-Allow-Headers",
-											"value": "origin, x-requested-with, content-type"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"serviceName\": \"consultCommerce\",\n    \"statusCode\": 4,\n    \"message\": \"El número de identificación ya se encuentra registrado en el sistema\",\n    \"response\": {\n        \"infoBussines\": {\n            \"typeBusiness\": \"Jurídica\",\n            \"idType\": \"5\",\n            \"idNumber\": \"114191471212\",\n            \"bussinesName\": \"Ferreteria Colombia\",\n            \"country\": \"170\",\n            \"department\": \"11\",\n            \"city\": \"11001\",\n            \"address\": \"Kra 38 # 98-09\",\n            \"category\": \"1\",\n            \"billing\": \"E\",\n            \"commerceInfo\": [\n                {\n                    \"uniqueCode\": \"919754605\",\n                    \"name\": \"Ferreteria Colombia\",\n                    \"nickName\": \"Ferreteria Colombia Bogota\",\n                    \"country\": \"170\",\n                    \"department\": \"47\",\n                    \"city\": \"47001\",\n                    \"address\": \"Calle 70 #110 89\",\n                    \"mdr\": \"1,03\",\n                    \"salePresent\": true,\n                    \"salePresentN\": false,\n                    \"fiid\": \"0002\",\n                    \"accountType\": \"10\",\n                    \"accountNumber\": \"1141910070\",\n                    \"state\": \"1 \",\n                    \"stateReason\": \"0\"\n                }\n            ]\n        },\n        \"legalRepresent\": {\n            \"idType\": \"1\",\n            \"idData\": \"800999220\",\n            \"name\": \"Gustavo\",\n            \"lastName\": \"Velez\",\n            \"phone\": \"3009876477\",\n            \"email\": \"ferreterias@micorreo.com.co\"\n        },\n        \"existsSEI\": false\n    }\n}"
-								}
-							]
-						},
-						{
-							"name": "Registrar comercio iniciar",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"sessionId\": \"21345656\",\r\n    \"enrollment\": {\r\n        \"date\": \"2021-07-12 11:30:45\",\r\n        \"ip\": \"192.168.7.90\",\r\n        \"origin\": \"1\",       \r\n        \"user\": \"comercio\"\r\n    },\r\n    \"infoAccount\": {\r\n        \"fiid\": \"0160\",\r\n        \"number\": \"0000928384\",\r\n        \"type\": \"10\"\r\n    },\r\n    \"infoBusiness\": {\r\n        \"city\": \"11001\",\r\n        \"department\": \"11\",\r\n        \"address\": \"Esta es mi dirección test 4\",\r\n        \"idNumber\": \"800323124\",\r\n        \"businessName\": \"Test business 4\",\r\n        \"type\": \"Natural\",\r\n        \"idType\": \"5\",\r\n        \"infoCommerce\": [{\r\n            \"city\": \"11001\",\r\n            \"tributaryCode\": \"4632\",\r\n            \"department\": \"11\",\r\n            \"address\": \"Sede Sur 4\",\r\n            \"mdr\": \"103\",\r\n            \"name\": \"My commerce 4\",\r\n            \"salePresentN\": false,\r\n            \"salePresent\": true\r\n        }]\r\n    },\r\n    \"infoAgent\": {\r\n        \"name\": \"Name test RBM 4\",\r\n        \"lastName\": \"Lastname test RBM 4\",\r\n        \"email\": \"correoprueba@micorreo.com.co\",\r\n        \"expeditionDate\": \"2019-04-02\",\r\n        \"idData\": \"1075653014\",\r\n        \"phone\": \"+573007773784\",\r\n        \"idType\": \"1\"\r\n    },\r\n    \"validations\": {\r\n    \t   \"buro\": false,\r\n    \t   \"risk\": true,\r\n    \t   \"bankResult\": \"OK\",\r\n    \t   \"riskResult\": \"OK\",\r\n        \"bank\": true,\r\n        \"buroResult\": \"OK\"\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "https://api-gateway-core.validsolutions.com.br/api-gateway/rbm-instant-payments-merchant/api/register/startRegisterCommerce",
-									"protocol": "https",
-									"host": [
-										"api-gateway-core",
-										"validsolutions",
-										"com",
-										"br"
-									],
-									"path": [
-										"api-gateway",
-										"rbm-instant-payments-merchant",
-										"api",
-										"register",
-										"startRegisterCommerce"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Registrar comercio registrar",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"sessionId\": \"234234354590534\",\r\n    \"enrollment\": {\r\n        \"date\": \"2021-07-12 11:30:45\",\r\n        \"ip\": \"192.168.7.90\",\r\n        \"origin\": \"1\",       \r\n        \"user\": \"comercio\"\r\n    },\r\n    \"infoAccount\": {\r\n        \"fiid\": \"0160\",\r\n        \"number\": \"0000928385\",\r\n        \"type\": \"10\"\r\n    },\r\n    \"infoBusiness\": {\r\n        \"city\": \"11001\",\r\n        \"department\": \"11\",\r\n        \"address\": \"Esta es mi dirección test 5\",\r\n        \"idNumber\": \"800323126\",\r\n        \"businessName\": \"Test business 5\",\r\n        \"type\": \"Natural\",\r\n        \"idType\": \"5\",\r\n        \"infoCommerce\": [{\r\n            \"city\": \"11001\",\r\n            \"tributaryCode\": \"4632\",\r\n            \"department\": \"11\",\r\n            \"address\": \"Sede Suroeste 5\",\r\n            \"mdr\": \"103\",\r\n            \"name\": \"My commerce 5\",\r\n            \"salePresentN\": false,\r\n            \"salePresent\": true\r\n        }]\r\n    },\r\n    \"infoAgent\": {\r\n        \"name\": \"Name test RBM 5\",\r\n        \"lastName\": \"Lastname test RBM 5\",\r\n        \"email\": \"correoprueba@micorreo.com.co\",\r\n        \"expeditionDate\": \"2019-04-02\",\r\n        \"idData\": \"1075653015\",\r\n        \"phone\": \"+573007773785\",\r\n        \"idType\": \"1\"\r\n    },\r\n    \"validations\": {\r\n    \t   \"buro\": false,\r\n    \t   \"risk\": true,\r\n    \t   \"bankResult\": \"OK\",\r\n    \t   \"riskResult\": \"OK\",\r\n        \"bank\": true,\r\n        \"buroResult\": \"OK\"\r\n    }\r\n}\r\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "https://api-gateway-core.validsolutions.com.br/api-gateway/rbm-instant-payments-merchant/api/register/registerCommerce",
-									"protocol": "https",
-									"host": [
-										"api-gateway-core",
-										"validsolutions",
-										"com",
-										"br"
-									],
-									"path": [
-										"api-gateway",
-										"rbm-instant-payments-merchant",
-										"api",
-										"register",
-										"registerCommerce"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Registrar comercio reconocer",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"sessionId\": \"23423445\",\r\n    \"enrollment\": {\r\n        \"date\": \"2021-07-12 11:30:45\",\r\n        \"ip\": \"192.168.7.90\",\r\n        \"origin\": \"1\",      \r\n        \"user\": \"comercio\",\r\n        \"id\": 1015\r\n    },\r\n    \"infoAccount\": {\r\n        \"fiid\": \"0160\",\r\n        \"number\": \"0000928386\",\r\n        \"type\": \"10\"\r\n    },\r\n    \"infoBusiness\": {\r\n        \"city\": \"11001\",\r\n        \"department\": \"11\",\r\n        \"address\": \"Esta es mi dirección test 6\",\r\n        \"idNumber\": \"800323126\",\r\n        \"businessName\": \"Test business 6\",\r\n        \"type\": \"Natural\",\r\n        \"idType\": \"5\",\r\n        \"infoCommerce\": [{\r\n            \"city\": \"11001\",\r\n            \"tributaryCode\": \"4632\",\r\n            \"department\": \"11\",\r\n            \"address\": \"Sede Suroeste 6\",\r\n            \"mdr\": \"103\",\r\n            \"name\": \"My commerce 6\",\r\n            \"salePresentN\": false,\r\n            \"salePresent\": true\r\n        }]\r\n    },\r\n    \"infoAgent\": {\r\n        \"name\": \"Name test RBM 6\",\r\n        \"lastName\": \"Lastname test RBM 6\",\r\n        \"email\": \"correoprueba@micorreo.com.co\",\r\n        \"expeditionDate\": \"2019-04-02\",\r\n        \"idData\": \"1075653016\",\r\n        \"phone\": \"+573007773786\",\r\n        \"idType\": \"1\"\r\n    },\r\n    \"validations\": {\r\n           \"buro\": false,\r\n           \"risk\": true,\r\n           \"bankResult\": \"OK\",\r\n           \"riskResult\": \"OK\",\r\n        \"bank\": true,\r\n        \"buroResult\": \"OK\",\r\n        \"buroResponse\":  {\r\n                \"secuenciaCuestionario\": \"14351681\",\r\n                \"preguntas\": [\r\n                    {\r\n                        \"textoPregunta\": \"¿En algún momento usted ha tenido línea celular con MOVISTAR?\",\r\n                        \"listadoRespuestas\": [\r\n                            {\r\n                                \"textoRespuesta\": \"SI\",\r\n                                \"secuenciaPregunta\": \"35\",\r\n                                \"secuenciaRespuesta\": \"35206959\"\r\n                            },\r\n                            {\r\n                                \"textoRespuesta\": \"NO\",\r\n                                \"secuenciaPregunta\": \"35\",\r\n                                \"secuenciaRespuesta\": \"35206960\"\r\n                            }\r\n                        ],\r\n                        \"posicionPregunta\": \"1\",\r\n                        \"secuenciaPregunta\": \"35\"\r\n                    },\r\n                    {\r\n                        \"textoPregunta\": \"¿Usted adquirió un crédito en la modalidad COMERCIAL con BANCO DE CRÉDITO en los últimos seis meses?\",\r\n                        \"listadoRespuestas\": [\r\n                            {\r\n                                \"textoRespuesta\": \"SI\",\r\n                                \"secuenciaPregunta\": \"88\",\r\n                                \"secuenciaRespuesta\": \"35206962\"\r\n                            },\r\n                            {\r\n                                \"textoRespuesta\": \"NO\",\r\n                                \"secuenciaPregunta\": \"88\",\r\n                                \"secuenciaRespuesta\": \"35206961\"\r\n                            }\r\n                        ],\r\n                        \"posicionPregunta\": \"2\",\r\n                        \"secuenciaPregunta\": \"88\"\r\n                    },\r\n                    {\r\n                        \"textoPregunta\": \"En los últimos seis meses, ¿cuál de las siguientes entidades le ha desembolsado un crédito de vivienda y un microcrédito?\",\r\n                        \"listadoRespuestas\": [\r\n                            {\r\n                                \"textoRespuesta\": \"CONFINANCIERA S.A.\",\r\n                                \"secuenciaPregunta\": \"101\",\r\n                                \"secuenciaRespuesta\": \"35206964\"\r\n                            },\r\n                            {\r\n                                \"textoRespuesta\": \"MACROFINANCIERAS.A.\",\r\n                                \"secuenciaPregunta\": \"101\",\r\n                                \"secuenciaRespuesta\": \"35206965\"\r\n                            },\r\n                            {\r\n                                \"textoRespuesta\": \"GIROS & FINANZAS\",\r\n                                \"secuenciaPregunta\": \"101\",\r\n                                \"secuenciaRespuesta\": \"35206966\"\r\n                            },\r\n                            {\r\n                                \"textoRespuesta\": \"Ninguna de las anteriores\",\r\n                                \"secuenciaPregunta\": \"101\",\r\n                                \"secuenciaRespuesta\": \"35206963\"\r\n                            }\r\n                        ],\r\n                        \"posicionPregunta\": \"3\",\r\n                        \"secuenciaPregunta\": \"101\"\r\n                    }\r\n                ],\r\n                \"codigoCuestionario\": \"7335\",\r\n                \"nombreCompleto\": \"IDENTIFICACIONPRUEBAS CIFIN CALIDAD\",\r\n                \"codigoRespuesta\": \"1\"\r\n            }\r\n    }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "https://api-gateway-core.validsolutions.com.br/api-gateway/rbm-instant-payments-merchant/api/register/recognizeCommerce",
-									"protocol": "https",
-									"host": [
-										"api-gateway-core",
-										"validsolutions",
-										"com",
-										"br"
-									],
-									"path": [
-										"api-gateway",
-										"rbm-instant-payments-merchant",
-										"api",
-										"register",
-										"recognizeCommerce"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Registrar comercio finalizar full",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2NDkzNjA3NzMsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTY0OTM2NDM3MywiaWF0IjoxNjQ5MzYwNzczLCJ2ZXJzaW9uIjoyLCJqdGkiOiI0MjhmZjhlZS02NDkxLTRiM2EtYjZlOC1mZmJmOTdjZGEyYmYiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.UCqV0DPafnRcIKeszSZdmMw1f0l_cbGzz1NFTnb7z-WaGvuaicN3qDib9zmrhN0XteYFeb42oLs7SkJRRtBTVCtfTbaL5gitHbH8b9M4KBwx7DhzV1TLW5pKf5Ch95pnvuWyZK4j9dgKPHAecjYYTQzIRwqX6iL_cqsKUp-R-L0Lk3HQ5MjyGMRdELxUVdnmxBEPXjzeeN-QPK30i6cMnc-tnb1p6zjjawvF8ASYxh7lPqG1hcu2fneKf6dnvaF0oDfwFqo3Ljqx2vLI-Xd9MrDnfUgP0Hj0Wt8Xj0rnZ6HQ6Ut7G5F3zR2PwOSYqjnLx7vnTfhadhNTbVA0ThaNzQ",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{    \r\n  \"sessionId\": \"16493630519464256874115472095135\",\r\n  \"enrollment\": {\r\n    \"date\": \"2022-04-07 15:25:45\",\r\n    \"ip\": \"192.168.7.90\",\r\n    \"origin\": \"1\",\r\n    \"user\": \"comercio\"\r\n  },\r\n  \"infoAccount\": {\r\n\t\"fiid\": \"0160\",\r\n\t\"number\": \"9841922990\",\r\n\t\"type\": \"10\"\r\n  },\r\n  \"infoAgent\": {\r\n\t\"name\": \"Pedro\",\r\n\t\"lastName\": \"Romero\",\r\n\t\"email\": \"PruebaCrearComercio1@micorreo.com.co\",\r\n\t\"expeditionDate\": \"1986-09-02\",\r\n\t\"idData\": \"811994583\",\r\n\t\"phone\": \"+573009957396\",\r\n\t\"idType\": \"1\"\r\n},\r\n  \"infoBusiness\": {\r\n\t\t\"city\": \"11001\",\r\n\t\t\"department\": \"11\",\r\n\t\t\"address\": \"Kra 18 # 8-09\",\r\n\t\t\"idNumber\": \"191471007\",\r\n\t\t\"bussinesName\": \"Cocinas Italiana\",\r\n\t\t\"typeBusiness\": \"juridica\",\r\n\t\t\"idType\": \"5\",\r\n    \"infoCommerce\": [\r\n      {\r\n            \"uniqueCode\": null,\r\n\t\t\t\"city\": \"47001\",\r\n\t\t\t\"tributaryCode\": \"4632\",\r\n\t\t\t\"department\": \"47\",\r\n\t\t\t\"address\": \"Kra 80 # 20 79\",\r\n\t\t\t\"mdr\": \"103\",\r\n\t\t\t\"name\": \"Cocinas MagicItaliBta\",\r\n\t\t\t\"salePresentN\": false,\r\n\t\t\t\"salePresent\": true\r\n      },\r\n          {\r\n            \"uniqueCode\": null,\r\n\t\t\t\"city\": \"50001\",\r\n\t\t\t\"tributaryCode\": null,\r\n\t\t\t\"department\": \"50\",\r\n\t\t\t\"address\": \"Calle 97 # 37 38\",\r\n\t\t\t\"mdr\": \"098\",\r\n\t\t\t\"name\": \"Cocinas MagicItalUS\",\r\n\t\t\t\"salePresentN\": false,\r\n\t\t\t\"salePresent\": true\r\n      }\r\n    ]\r\n  }\r\n}"
-								},
-								"url": {
-									"raw": "https://api-gateway-core.validsolutions.com.br/api-gateway/rbm-instant-payments-merchant/api/register/finishCommerce",
-									"protocol": "https",
-									"host": [
-										"api-gateway-core",
-										"validsolutions",
-										"com",
-										"br"
-									],
-									"path": [
-										"api-gateway",
-										"rbm-instant-payments-merchant",
-										"api",
-										"register",
-										"finishCommerce"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Registrar comercio finalizar Copy",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{accessToken}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{    \r\n  \"sessionId\": {{sessionId}},\r\n  \"enrollment\": {\r\n    \"date\": \"2022-06-06 11:56:00\",\r\n    \"ip\": \"192.168.7.90\",\r\n    \"origin\": \"1\",\r\n    \"user\": \"comercio\"\r\n  },\r\n  \"infoAccount\": {\r\n\t\"fiid\": \"0160\",\r\n\t\"number\": \"5700059791432\",\r\n\t\"type\": \"10\"\r\n  },\r\n  \"infoAgent\": {\r\n\t\"name\": \"PRUEBA 20220503\",\r\n\t\"lastName\": \"Ceballos\",\r\n\t\"email\": \"serviconter1@gmail.com\",\r\n\t\"expeditionDate\": \"1986-11-05\",\r\n\t\"idData\": \"14615439\",\r\n\t\"phone\": \"+573516603761\",\r\n\t\"idType\": \"1\"\r\n},\r\n  \"infoBusiness\": {\r\n\t\t\"city\": \"11001\",\r\n\t\t\"department\": \"11\",\r\n\t\t\"address\": \"Calle 19 154-26 LC 1\",\r\n\t\t\"idNumber\": \"1517963195\",\r\n\t\t\"bussinesName\": \"Cocinas Italiana Bogota\",\r\n\t\t\"typeBusiness\": \"juridica\",\r\n\t\t\"idType\": \"5\",\r\n    \"infoCommerce\": [\r\n      {\r\n            \"uniqueCode\": null,\r\n\t\t\t\"city\": \"47001\",\r\n\t\t\t\"tributaryCode\": \"4632\",\r\n\t\t\t\"department\": \"47\",\r\n\t\t\t\"address\": \"Calle Calle 21 # 26 79 LC 6\",\r\n\t\t\t\"mdr\": \"103\",\r\n\t\t\t\"name\": \"Cocinas MagicItaliNeiva\",\r\n\t\t\t\"salePresentN\": false,\r\n\t\t\t\"salePresent\": true\r\n      },\r\n          {\r\n            \"uniqueCode\": null,\r\n\t\t\t\"city\": \"50001\",\r\n\t\t\t\"tributaryCode\": null,\r\n\t\t\t\"department\": \"50\",\r\n\t\t\t\"address\": \"Calle Calle 31 # 65 38 LC9\",\r\n\t\t\t\"mdr\": \"098\",\r\n\t\t\t\"name\": \"Cocinas MagicItalNei\",\r\n\t\t\t\"salePresentN\": false,\r\n\t\t\t\"salePresent\": true\r\n      }\r\n    ]\r\n  }\r\n}"
-								},
-								"url": {
-									"raw": "{{URL_BASE}}/rbm-instant-payments-merchant/api/register/finishCommerce",
-									"host": [
-										"{{URL_BASE}}"
-									],
-									"path": [
-										"rbm-instant-payments-merchant",
-										"api",
-										"register",
-										"finishCommerce"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Actualizar comercio",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzE5MTAwOTEsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzMTkxMzY5MSwiaWF0IjoxNjMxOTEwMDkxLCJ2ZXJzaW9uIjoyLCJqdGkiOiJlZmYwZWNhYy0xMTY0LTQ0MGItYTdmNS1jMjYwN2FlNDQ3NjEiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.dS7XJOd9bLwVtLhMO35lEqWh1CIhC11gdpLXo6W2QOiAYMp_VSCik5fbWRqLZTY0O1Z0QzToV7KfwlY23Uukr1Xpyu_Ua1J74gLXXGeUxsoJ-mUBLs41WeJDsVqNNfbJZfOhqk3D6L4YuMopdr3e005D4Q_DapFMLKqdynd2B4NDlyZkpKX8B2gzsLBa7T6snbJ_GiLyzz9_CPaDewk_Yn2pZRa42O4kaIbovSHuFmbvWKMvyluQq5_YN9gzZRHkuUDixP1BgzAkmRV_kGLNJKXoyqaZlDyu57BoSXfgBbLnzaPm3wiNDz27M8BtzMycQ6w6eg-toCKQISIJmFG9Zw",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"sessionId\": \"16319098614814742828820659279358\",  \r\n  \"businessInfo\": {\r\n    \"idNumber\": \"11883002\",\r\n    \"idType\": \"1\",\r\n    \"address\": \"Esta es mi nueva dirección 4451\",\r\n    \"city\": \"11001\",\r\n    \"commerceInfo\": {\r\n      \"fiid\": \"0160\",\r\n      \"uniqueCode\": \"919684422\",\r\n      \"accountNumber\": \"000123456789\",\r\n      \"accountType\": \"20\"\r\n    }\r\n  },\r\n  \"enrollment\": {\r\n    \"date\": \"2021-08-12 09:33:32\",\r\n    \"ip\": \"192.168.12.134\",\r\n    \"origin\": \"1\",\r\n    \"user\": \"jalarcon\"\r\n  }\r\n}"
-								},
-								"url": {
-									"raw": "https://api-gateway-core.validsolutions.com.br/api-gateway/rbm-instant-payments-merchant/api/register/updateCommerce",
-									"protocol": "https",
-									"host": [
-										"api-gateway-core",
-										"validsolutions",
-										"com",
-										"br"
-									],
-									"path": [
-										"api-gateway",
-										"rbm-instant-payments-merchant",
-										"api",
-										"register",
-										"updateCommerce"
-									]
-								}
-							},
-							"response": []
-						}
-					],
+					"name": "ExchangeKey",
 					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
 								"exec": [
-									""
-								]
+									"\r",
+									"pm.test(\"Check if status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if response has format JSON\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"postman.setEnvironmentVariable(\"sessionId\", JSON.parse(responseBody).response.sessionId);"
+								],
+								"type": "text/javascript"
 							}
-						}
-					]
-				},
-				{
-					"name": "GenerateQR",
-					"item": [
-						{
-							"name": "generateQr_DYN",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2NTQ4MTE1ODYsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTY1NDgxNTE4NiwiaWF0IjoxNjU0ODExNTg2LCJ2ZXJzaW9uIjoyLCJqdGkiOiJkNzhiZGEwMS1iNTJlLTQ3ZTAtYjRmYi1mMjI2NDM0ZmM0YjAiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.Aln4uUQuW_KlfcnxWA7-K5rrqGlkHRAqINuL6qedgfukrBhTZQtfg3eCzO1gh9iZrPCLBzsh_D79tLQujhR8M4TZufqHijkkYgjUYiukOrGkMzhKbO6Clrl6oEETGZof3Z3aiMc4Dp7gRWt8cQJk5axslWXNSfoBENvv_PrT4KAoDEfTRbWkLf7C7ffE8h0MPb0sCGiDnLg1UAXsO0udKe83Z7PYaKOMuqI_iFHX1NrGj8usto4t7UtPymqGj_LQe-lqYJf-Gy4VkfsIKJmScIMJ4ojE1kAUTBvlkGtl4r51MZ1Qd4wLCP3j0_41XLCZN1OucjmrrrNcp4lMUmGBFg",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"requestGenerateQr\": {\n    \"additionalConsumerDataRequest\": null,\n    \"qrType\": \"DYN\",\n    \"uniqueCode\": \"919631050\",\n    \"storeLabel\": \"523655\",\n    \"ivaTaxIndicator\": \"02\",\n    \"incTaxIndicator\": \"02\",\n    \"mobileNumber\": \"+573144140651\",\n    \"terminal\": \"001\",\n    \"purposeOfTransaction\": \"00\",\n    \"transactionAmount\": 15000,\n    \"tipOrConvenienceIndicator\": \"02\"\n    \n  },\n  \"sessionId\": \"16548115795211495723493418953054\"\n}\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL_BASE}}/rbm-instant-payments-merchant/api/qr/generateQr",
-									"host": [
-										"{{URL_BASE}}"
-									],
-									"path": [
-										"rbm-instant-payments-merchant",
-										"api",
-										"qr",
-										"generateQr"
-									]
-								}
-							},
-							"response": []
 						},
-						{
-							"name": "generateQr_STA",
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "Authorization",
-										"value": "{{accessToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"requestGenerateQr\": {\n        \"incAmount\": 0,\n        \"incTaxIndicator\": \"03\",\n        \"ivaAmount\": 0,\n        \"ivaAmountBaseDevolution\": 0,\n        \"ivaTaxIndicator\": \"03\",\n        \"mobileNumber\": \"+573016603712\",\n        \"purposeOfTransaction\": \"02\",\n        \"qrType\": \"STA\",\n        \"terminal\": \"001\",\n        \"tipOrConvenienceIndicator\": \"02\",\n        \"propina\": 0,\n        \"transactionAmount\": 0,\n        \"transactionId\": \"000000\",\n        \"uniqueCode\": \"919896380\"\n    },\n    \"sessionId\": {{sessionId}}\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL_BASE}}/rbm-instant-payments-merchant/api/qr/generateQr",
-									"host": [
-										"{{URL_BASE}}"
-									],
-									"path": [
-										"rbm-instant-payments-merchant",
-										"api",
-										"qr",
-										"generateQr"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "generateQr_HYB",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"requestGenerateQr\": {\n    \"additionalConsumerDataRequest\": null,\n    \"incAmount\": 0,\n    \"incTaxIndicator\": \"02\",\n    \"ivaAmount\": 0,\n    \"ivaAmountBaseDevolution\": 0,\n    \"ivaTaxIndicator\": \"02\",\n    \"mobileNumber\": \"+573057111111\",\n    \"purposeOfTransaction\": \"00\",\n    \"qrType\": \"DYN\",\n    \"referenceLabel\": \"12345\",\n    \"securityCode\": \"123\",\n    \"taxAmount1\": 0,\n    \"taxAmount2\": 0,\n    \"taxIndicator1\": \"0\",\n    \"taxIndicator2\": \"0\",\n    \"terminal\": \"NETCOM03\",\n    \"tipOrConvenienceIndicator\": \"02\",\n    \"transactionAmount\": 100000,\n    \"transactionId\": \"000001\",\n    \"uniqueCode\": \"10203040\"\n\n  },\n  \"sessionId\": {{sessionId}}\n}\n",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{URL}}/rbm-instant-payments-merchant/qr/generateQr",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"rbm-instant-payments-merchant",
-										"qr",
-										"generateQr"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
-								"type": "text/javascript",
 								"exec": [
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					]
-				},
-				{
-					"name": "Query",
-					"item": [
-						{
-							"name": "queryCommerceQr",
-							"request": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \r\n \"terminalName\": null,\r\n \"uniqueCode\": \"10203040\",\r\n\r\n \"sessionId\": {{sessionId}}\r\n}"
-								},
-								"url": {
-									"raw": "{{URL}}/rbm-instant-payments-merchant/qr/queryCommerceQr",
-									"host": [
-										"{{URL}}"
-									],
-									"path": [
-										"rbm-instant-payments-merchant",
-										"qr",
-										"queryCommerceQr"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "QueryQrStatus",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2NDA3ODkyNzksImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTY0MDc5Mjg3OSwiaWF0IjoxNjQwNzg5Mjc5LCJ2ZXJzaW9uIjoyLCJqdGkiOiIzOWU5YWVmMC01ODk5LTQ5NDItOGJjMC04NTQwNTcxYjllODkiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.QIuzfyWQyVHPWYsF8gFrlFAFj3rmOs_9e6tc1721yZcNe28cnUXZV9dAdPjx8Yn0LqOCFUKMhJVHeqwad0CjpMa3xmjTBfQU4Y5Csz8EISC0SddPBcqsnY2X-ZEpFvWAO72j3PHq9C76O3l0IwE6UviecLkoL-hs6CEarlQKJkGt1t8UhoQl5WG2MqrL7Xd0XNbDEv3g7X5yI_SBnamcb7lsAdUfc-nAoyoavt9zgH50_uMPVXalhmo6BX0Pcxtz-dsd5VdkD0NlKYfa1hWoEmLymVa2VacBv67t_OB_BRb1UQWQuzRY5XTjlILTcMgJAeHWztS2R_cGPudtxNyAIQ",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"idCommerce\": \"910203040\",\r\n  \"idTerminal\": \"001\",\r\n  \"idTerminalTransaction\": \"001527\",\r\n  \"transactionDate\": \"29-12-2021\",\r\n  \"sessionId\": \"16407892720898076233155853840782\"\r\n}"
-								},
-								"url": {
-									"raw": "{{URL_BASE}}/rbm-instant-payments-merchant/api/qr/queryQrStatus",
-									"host": [
-										"{{URL_BASE}}"
-									],
-									"path": [
-										"rbm-instant-payments-merchant",
-										"api",
-										"qr",
-										"queryQrStatus"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Multifiltro",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2NTU0OTM5MDYsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTY1NTQ5NzUwNiwiaWF0IjoxNjU1NDkzOTA2LCJ2ZXJzaW9uIjoyLCJqdGkiOiJjODI3MDVmYy0zZDliLTRiMTAtYjZhOS1kOWFkMDNmNzZhNDUiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.GtWwGQvAsT-Earqwq5JKC3HL60-FYib9YDK5887V2mEHYHpFvKySN11fZCm4PFElr563hPh94UhCozt9O72cLtayG8TC5IEiM90v3Q_HJ2xaUN7lDbgivQ0uxhesIRjkh8dRO0WmBJlnNSDmBsq7Bf-ZKM9FVEmdJctUDkBdKek3vn9WhAJefJ_cDGozgcCsPVN2cQP7JWB10lMIf0vfBaF3k23JDRsb0T7vtEJuWzh_JGop-LpJHiOBRcG2PxXHyeLemWeaAysHeCwkdYp4TxcFhoqgp5KSOWrsFr3Dwwtme4-Gk2TJTdakJV7pCcQaXrKc4mh1niB98P-pUyNX6w",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{ \r\n\r\n    \"sessionId\": \"1655494413238635457879423470061\", \r\n    \"fiid\": 160, \r\n    \"idUser\": \"910203040\",\r\n    \"orderType\": \"ASC\", \r\n    \"state\": null, \r\n    \"page\": 1, \r\n    \"elements\": 20\r\n}"
-								},
-								"url": {
-									"raw": "{{URL_BASE}}/rbm-instant-payments-transactionquery/api/transactionQuery/general/queryMultifilter",
-									"host": [
-										"{{URL_BASE}}"
-									],
-									"path": [
-										"rbm-instant-payments-transactionquery",
-										"api",
-										"transactionQuery",
-										"general",
-										"queryMultifilter"
-									]
-								}
-							},
-							"response": []
 						}
 					],
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"publicKey\": \"-----BEGIN PUBLIC KEY-----\\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKgkX8l6mQr9gNyabAztYTfSFg\\ns2NegXTtykMVKzeaXUud2OCPDUiPFRrN2OLpsr1iJ+0zw3a71JFG/qD0WbRFWZkn\\nNBTcnp2e/ZwpkXe3/Six3hwwzHtEiVy6dnZEympUx5pys88TAVhbPrQG4YK0HMTU\\np+DOqXCsobTh4R1s1QIDAQAB\\n-----END PUBLIC KEY-----\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
 							}
 						},
+						"url": {
+							"raw": "{{URL_BASE}}/rbm-instant-payments-communications/auth/exchangeKey/",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"rbm-instant-payments-communications",
+								"auth",
+								"exchangeKey",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token Cognito",
+					"event": [
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
 								"exec": [
+									"\r",
+									"pm.test(\"Check if status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if response has format JSON\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"postman.setEnvironmentVariable(\"accessToken\", JSON.parse(responseBody).response.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"authorization\": \"Basic NDdlaXFibm50YXI1MGtvMzA4ZDJqbWltOXI6ZmRtNnJpZHFuMmplOGFhaWtwbGZmaDVyam1mODdmZWJuaG1lYmpvNnEydHRmdGlpNnJx\",\r\n    \"sessionId\": \"{{sessionId}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/rbm-instant-payments-communications/api/auth/tokenCognito",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"rbm-instant-payments-communications",
+								"api",
+								"auth",
+								"tokenCognito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check if status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if response has format JSON\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Pay",
-			"item": [
-				{
-					"name": "validatePayment",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Authorization",
-								"value": "{{accessToken}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"amount\": \"10000\",\n  \"bankFee\": \"0\",\n  \"commerceTerminal\": \"001\",\n  \"concept\": \"Prueba pago QR 23 JUNIO\",\n  \"currencyType\": \"1\",\n  \"fiid\": \"0023\",\n  \"idClient\": \"+573522555709\",\n  \"idCommerce\": \"919899806\",\n  \"orderNumber\": \"204060\",\n  \"sessionId\": {{sessionId}}\n}\n\n\n"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-transactionp2m/api/transactionP2M/validatePayment",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-transactionp2m",
-								"api",
-								"transactionP2M",
-								"validatePayment"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "pay",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "Authorization",
-								"value": "{{accessToken}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"amount\": \"10000\",\n    \"bankFee\": \"0\",\n    \"commerceTerminal\": \"001\",\n    \"currencyType\": \"1\",\n    \"fiid\": \"0023\",\n    \"idClient\": \"+573522555709\",\n    \"idCommerce\": \"919899806\",\n    \"operationId\": \"75789207271794439136455632283009249\",\n    \"orderNumber\": null,\n    \"sessionId\": {{sessionId}},\n    \"transaction\": {\n        \"idAcquirer\": \"910203040\",\n        \"channel\": \"APP\",\n        \"idTerminal\": \"001\",\n        \"idTerminalTransaction\": \"000725\",\n        \"idTransaction\": \"75789207271794439136455632283009249\",\n        \"withdrawalKey\": \"FFFFFFFFFFFFFFFF\"\n    }\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-transactionp2m/api/transactionP2M/pay",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-transactionp2m",
-								"api",
-								"transactionP2M",
-								"pay"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "returnPayment",
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2NDA3MjI3NzEsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTY0MDcyNjM3MSwiaWF0IjoxNjQwNzIyNzcxLCJ2ZXJzaW9uIjoyLCJqdGkiOiIzZmI4OWQ1Zi0wZjAxLTQ4NTQtYjMzNS01MDdkYzNmYjBhZDIiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.Y7i4xeUzr_l5tZ3A18Qz-Twj00P3j4eH_dbe7ptstJBOO8WcWdkQatkJG8hfq_T8Wv6uJ6f15IHl0MxtgqcRKdjixSlVnybUgAQo2DG1FAw2pX8RAoXOdaTLyDwCrVIf9hLMj5kS-mVfSilh7NvldXmazf2rCtkOUtX2Tjb0DmiL4eFsVDMOfeZNg3Oxo4hkanJHTQRBcqUMfsWMB0K6mZskiWBAIEbReJz5nr0v2aiZQAke6k14mCHP3r8g9YGD6opV8oomtBz3IJtafNFV_ART94mWAL5ippgts4q7V0gcPYrfImXQTshIslOu4AkdbIcJsTO4wwt2u99w6W1gYA",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"fiid\": \"49\",\r\n    \"sessionId\": \"16407227658717354694935467477464\",\r\n    \"idClient\": \"+573115158555\",\r\n    \"idCommerce\": \"910203040\",\r\n    \"amount\": 88500,\r\n    \"currencyType\": 1,\r\n    \"concept\": \"String\",\r\n    \"commerceTerminal\": \"001\",\r\n    \"orderNumber\": null,\r\n    \"bankFee\": 0,\r\n    \"operationId\": \"59394179544566416515899548068595447\",\r\n    \"transaction\": {\r\n    \"idAcquirer\": \"919607365\",\r\n    \"channel\": \"APP\",\r\n    \"idTerminal\": \"001\",\r\n    \"idTerminalTransaction\": \"001523\",\r\n    \"idTransaction\": \"59394179544566416515899548068595447\",\r\n    \"withdrawalKey\": \"FFFFFFFFFFFFFFFF\"\r\n  }\r\n}"
-						},
-						"url": {
-							"raw": "https://api-gateway-core.validsolutions.com.br/api-gateway/rbm-instant-payments-transactionp2m/api/transactionP2M/returnPayment",
-							"protocol": "https",
-							"host": [
-								"api-gateway-core",
-								"validsolutions",
-								"com",
-								"br"
-							],
-							"path": [
-								"api-gateway",
-								"rbm-instant-payments-transactionp2m",
-								"api",
-								"transactionP2M",
-								"returnPayment"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Params",
-			"item": [
-				{
-					"name": "Countries",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNjMwNTAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE2NjY1MCwiaWF0IjoxNjM5MTYzMDUwLCJ2ZXJzaW9uIjoyLCJqdGkiOiI4YzA5MGQwMy00MmQ5LTRiMTQtODhhMS0yMmJkOTdlMDMyMDAiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.YuMPQoiQFFI1VlgBd3XIkmCXK7i4fjxCN5oaaQDkwLTzIpz3fkoBLbDwcg77Nzrny15e_cpX19U2_2la2mrtFLFNgbSgN7xKtDWfHlrxE9lCbd03WXO6qCeYfdQNfS2VbvsNwnCXfi-1UpDJBB_yv5RsrMJlEYs3E8OuX60gtiLnTYwB52n0FVCZpSzMuK5fz41xW31K5g4wPEyXKa3iQ8MAXi4hXvh0X7DK9ovzAOZ_Cj284NvwtiZkrqxhbOVHoRG2TUKiABBP5c-3wIF8hXeXHP3Uc8fugzFCEwvjrh2daEAMheJvK55eujuieZ78IWhO1ByAB8o3QTbqrgxKlw",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"sessionId\": \"16391630454473614036488097242876\"\r\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-params/api/params/getCountries",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-params",
-								"api",
-								"params",
-								"getCountries"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Departments",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNjMwNTAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE2NjY1MCwiaWF0IjoxNjM5MTYzMDUwLCJ2ZXJzaW9uIjoyLCJqdGkiOiI4YzA5MGQwMy00MmQ5LTRiMTQtODhhMS0yMmJkOTdlMDMyMDAiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.YuMPQoiQFFI1VlgBd3XIkmCXK7i4fjxCN5oaaQDkwLTzIpz3fkoBLbDwcg77Nzrny15e_cpX19U2_2la2mrtFLFNgbSgN7xKtDWfHlrxE9lCbd03WXO6qCeYfdQNfS2VbvsNwnCXfi-1UpDJBB_yv5RsrMJlEYs3E8OuX60gtiLnTYwB52n0FVCZpSzMuK5fz41xW31K5g4wPEyXKa3iQ8MAXi4hXvh0X7DK9ovzAOZ_Cj284NvwtiZkrqxhbOVHoRG2TUKiABBP5c-3wIF8hXeXHP3Uc8fugzFCEwvjrh2daEAMheJvK55eujuieZ78IWhO1ByAB8o3QTbqrgxKlw",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"filter\": 1,\r\n  \"sessionId\": \"16391630454473614036488097242876\"\r\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-params/api/params/getDepartments",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-params",
-								"api",
-								"params",
-								"getDepartments"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Cities",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNjMwNTAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE2NjY1MCwiaWF0IjoxNjM5MTYzMDUwLCJ2ZXJzaW9uIjoyLCJqdGkiOiI4YzA5MGQwMy00MmQ5LTRiMTQtODhhMS0yMmJkOTdlMDMyMDAiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.YuMPQoiQFFI1VlgBd3XIkmCXK7i4fjxCN5oaaQDkwLTzIpz3fkoBLbDwcg77Nzrny15e_cpX19U2_2la2mrtFLFNgbSgN7xKtDWfHlrxE9lCbd03WXO6qCeYfdQNfS2VbvsNwnCXfi-1UpDJBB_yv5RsrMJlEYs3E8OuX60gtiLnTYwB52n0FVCZpSzMuK5fz41xW31K5g4wPEyXKa3iQ8MAXi4hXvh0X7DK9ovzAOZ_Cj284NvwtiZkrqxhbOVHoRG2TUKiABBP5c-3wIF8hXeXHP3Uc8fugzFCEwvjrh2daEAMheJvK55eujuieZ78IWhO1ByAB8o3QTbqrgxKlw",
+									"value": "{{accessToken}}",
 									"type": "string"
 								}
 							]
@@ -1377,36 +503,205 @@
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"filter\": 33,\n\t\"sessionId\": \"16391630454473614036488097242876\"\n}"
+							"raw": "{\r\n    \"sessionId\": \"{{sessionId}}\",\r\n    \"fiid\": {{fiid}},\r\n    \"person\": {\r\n        \"phone\": \"+{{phone}}\",\r\n        \"iban\": \"{{iban}}\",\r\n        \"idType\": {{idType}},\r\n        \"idNumber\": \"{{idNumber}}\",\r\n        \"name\": \"{{name1}}\",\r\n        \"lastName1\": \"{{lastName1}}\",\r\n        \"lastName2\": \"{{lastName2}}\",\r\n        \"email\": \"{{email}}\",\r\n        \"status\": {{status}},\r\n        \"address\": {\r\n            \"province\": {{province}},\r\n            \"town\": {{town}},\r\n            \"type\": \"{{type}}\",\r\n            \"door\": \"{{door}}\",\r\n            \"floor\": \"{{floor}}\",\r\n            \"name\": \"{{name}}\",\r\n            \"number\": {{number}},\r\n            \"portal\": \"{{portal}}\",\r\n            \"stairs\": \"{{stairs}}\",\r\n            \"zipCode\": \"{{zipCode}}\"\r\n        }\r\n    },\r\n    \"portabilityCode\": {{portabilityCode}},\r\n    \"version\": {{version}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-params/api/params/getCities",
+							"raw": "{{URL_BASE}}/rbm-instant-payments-person/api/person/register",
 							"host": [
 								"{{URL_BASE}}"
 							],
 							"path": [
-								"rbm-instant-payments-params",
+								"rbm-instant-payments-person",
 								"api",
-								"params",
-								"getCities"
+								"person",
+								"register"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "registrePortabilidad",
+			"item": [
+				{
+					"name": "ExchangeKey",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Check if status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if response has format JSON\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"postman.setEnvironmentVariable(\"sessionId\", JSON.parse(responseBody).response.sessionId);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"publicKey\": \"-----BEGIN PUBLIC KEY-----\\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKgkX8l6mQr9gNyabAztYTfSFg\\ns2NegXTtykMVKzeaXUud2OCPDUiPFRrN2OLpsr1iJ+0zw3a71JFG/qD0WbRFWZkn\\nNBTcnp2e/ZwpkXe3/Six3hwwzHtEiVy6dnZEympUx5pys88TAVhbPrQG4YK0HMTU\\np+DOqXCsobTh4R1s1QIDAQAB\\n-----END PUBLIC KEY-----\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/rbm-instant-payments-communications/auth/exchangeKey/",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"rbm-instant-payments-communications",
+								"auth",
+								"exchangeKey",
+								""
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "AccountTypes",
+					"name": "Token Cognito",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Check if status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if response has format JSON\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"postman.setEnvironmentVariable(\"accessToken\", JSON.parse(responseBody).response.accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"authorization\": \"Basic NDdlaXFibm50YXI1MGtvMzA4ZDJqbWltOXI6ZmRtNnJpZHFuMmplOGFhaWtwbGZmaDVyam1mODdmZWJuaG1lYmpvNnEydHRmdGlpNnJx\",\r\n    \"sessionId\": \"{{sessionId}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/rbm-instant-payments-communications/api/auth/tokenCognito",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"rbm-instant-payments-communications",
+								"api",
+								"auth",
+								"tokenCognito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check if status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if response has format JSON\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Se intentó insertar un elemento ya existente\", function () {\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.expect(jsonData.code).to.eql('4');\r",
+									"});\r",
+									"\r",
+									"const portabilidad  = pm.response.json();\r",
+									"pm.environment.set(\"message\", portabilidad.message.substring(131, 137));\r",
+									"console.log(portabilidad);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNjMwNTAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE2NjY1MCwiaWF0IjoxNjM5MTYzMDUwLCJ2ZXJzaW9uIjoyLCJqdGkiOiI4YzA5MGQwMy00MmQ5LTRiMTQtODhhMS0yMmJkOTdlMDMyMDAiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.YuMPQoiQFFI1VlgBd3XIkmCXK7i4fjxCN5oaaQDkwLTzIpz3fkoBLbDwcg77Nzrny15e_cpX19U2_2la2mrtFLFNgbSgN7xKtDWfHlrxE9lCbd03WXO6qCeYfdQNfS2VbvsNwnCXfi-1UpDJBB_yv5RsrMJlEYs3E8OuX60gtiLnTYwB52n0FVCZpSzMuK5fz41xW31K5g4wPEyXKa3iQ8MAXi4hXvh0X7DK9ovzAOZ_Cj284NvwtiZkrqxhbOVHoRG2TUKiABBP5c-3wIF8hXeXHP3Uc8fugzFCEwvjrh2daEAMheJvK55eujuieZ78IWhO1ByAB8o3QTbqrgxKlw",
+									"value": "{{accessToken}}",
 									"type": "string"
 								}
 							]
@@ -1416,38 +711,76 @@
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"sessionId\": \"16391630454473614036488097242876\"\r\n}"
+							"raw": "{\r\n    \"sessionId\": \"{{sessionId}}\",\r\n    \"fiid\": {{fiid}},\r\n    \"person\": {\r\n        \"phone\": \"+{{phone}}\",\r\n        \"iban\": \"{{iban}}\",\r\n        \"idType\": {{idType}},\r\n        \"idNumber\": \"{{idNumber}}\",\r\n        \"name\": \"{{name1}}\",\r\n        \"lastName1\": \"{{lastName1}}\",\r\n        \"lastName2\": \"{{lastName2}}\",\r\n        \"email\": \"{{email}}\",\r\n        \"status\": {{status}},\r\n        \"address\": {\r\n            \"province\": {{province}},\r\n            \"town\": {{town}},\r\n            \"type\": \"{{type}}\",\r\n            \"door\": \"{{door}}\",\r\n            \"floor\": \"{{floor}}\",\r\n            \"name\": \"{{name}}\",\r\n            \"number\": {{number}},\r\n            \"portal\": \"{{portal}}\",\r\n            \"stairs\": \"{{stairs}}\",\r\n            \"zipCode\": \"{{zipCode}}\"\r\n        }\r\n    },\r\n    \"version\": {{version}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-params/api/params/getAccountTypes",
+							"raw": "{{URL_BASE}}/rbm-instant-payments-person/api/person/register",
 							"host": [
 								"{{URL_BASE}}"
 							],
 							"path": [
-								"rbm-instant-payments-params",
+								"rbm-instant-payments-person",
 								"api",
-								"params",
-								"getAccountTypes"
+								"person",
+								"register"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "BankEntities",
+					"name": "registerPortabilidad",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check if status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if response has format JSON\", function() {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNjMwNTAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE2NjY1MCwiaWF0IjoxNjM5MTYzMDUwLCJ2ZXJzaW9uIjoyLCJqdGkiOiI4YzA5MGQwMy00MmQ5LTRiMTQtODhhMS0yMmJkOTdlMDMyMDAiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.YuMPQoiQFFI1VlgBd3XIkmCXK7i4fjxCN5oaaQDkwLTzIpz3fkoBLbDwcg77Nzrny15e_cpX19U2_2la2mrtFLFNgbSgN7xKtDWfHlrxE9lCbd03WXO6qCeYfdQNfS2VbvsNwnCXfi-1UpDJBB_yv5RsrMJlEYs3E8OuX60gtiLnTYwB52n0FVCZpSzMuK5fz41xW31K5g4wPEyXKa3iQ8MAXi4hXvh0X7DK9ovzAOZ_Cj284NvwtiZkrqxhbOVHoRG2TUKiABBP5c-3wIF8hXeXHP3Uc8fugzFCEwvjrh2daEAMheJvK55eujuieZ78IWhO1ByAB8o3QTbqrgxKlw",
+									"value": "{{accessToken}}",
 									"type": "string"
 								}
 							]
@@ -1457,300 +790,41 @@
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"sessionId\": \"16391630454473614036488097242876\"\r\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-params/api/params/getBankEntities",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-params",
-								"api",
-								"params",
-								"getBankEntities"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "BlockTypes",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNjMwNTAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE2NjY1MCwiaWF0IjoxNjM5MTYzMDUwLCJ2ZXJzaW9uIjoyLCJqdGkiOiI4YzA5MGQwMy00MmQ5LTRiMTQtODhhMS0yMmJkOTdlMDMyMDAiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.YuMPQoiQFFI1VlgBd3XIkmCXK7i4fjxCN5oaaQDkwLTzIpz3fkoBLbDwcg77Nzrny15e_cpX19U2_2la2mrtFLFNgbSgN7xKtDWfHlrxE9lCbd03WXO6qCeYfdQNfS2VbvsNwnCXfi-1UpDJBB_yv5RsrMJlEYs3E8OuX60gtiLnTYwB52n0FVCZpSzMuK5fz41xW31K5g4wPEyXKa3iQ8MAXi4hXvh0X7DK9ovzAOZ_Cj284NvwtiZkrqxhbOVHoRG2TUKiABBP5c-3wIF8hXeXHP3Uc8fugzFCEwvjrh2daEAMheJvK55eujuieZ78IWhO1ByAB8o3QTbqrgxKlw",
-									"type": "string"
+							"raw": "{\r\n    \"sessionId\": \"{{sessionId}}\",\r\n    \"fiid\": {{fiid}},\r\n    \"person\": {\r\n        \"phone\": \"+{{phone}}\",\r\n        \"iban\": \"{{iban}}\",\r\n        \"idType\": {{idType}},\r\n        \"idNumber\": \"{{idNumber}}\",\r\n        \"name\": \"{{name1}}\",\r\n        \"lastName1\": \"{{lastName1}}\",\r\n        \"lastName2\": \"{{lastName2}}\",\r\n        \"email\": \"{{email}}\",\r\n        \"status\": {{status}},\r\n        \"address\": {\r\n            \"province\": {{province}},\r\n            \"town\": {{town}},\r\n            \"type\": \"{{type}}\",\r\n            \"door\": \"{{door}}\",\r\n            \"floor\": \"{{floor}}\",\r\n            \"name\": \"{{name}}\",\r\n            \"number\": {{number}},\r\n            \"portal\": \"{{portal}}\",\r\n            \"stairs\": \"{{stairs}}\",\r\n            \"zipCode\": \"{{zipCode}}\"\r\n        }\r\n    },\r\n    \"portabilityCode\": \"{{message}}\",\r\n    \"version\": {{version}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
 							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"sessionId\": \"16391630454473614036488097242876\"\r\n}"
 						},
 						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-params/api/params/getBlockTypes",
+							"raw": "{{URL_BASE}}/rbm-instant-payments-person/api/person/register",
 							"host": [
 								"{{URL_BASE}}"
 							],
 							"path": [
-								"rbm-instant-payments-params",
+								"rbm-instant-payments-person",
 								"api",
-								"params",
-								"getBlockTypes"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "IdentificationTypes",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
+								"person",
+								"register"
+							],
+							"query": [
 								{
-									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNjMwNTAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE2NjY1MCwiaWF0IjoxNjM5MTYzMDUwLCJ2ZXJzaW9uIjoyLCJqdGkiOiI4YzA5MGQwMy00MmQ5LTRiMTQtODhhMS0yMmJkOTdlMDMyMDAiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.YuMPQoiQFFI1VlgBd3XIkmCXK7i4fjxCN5oaaQDkwLTzIpz3fkoBLbDwcg77Nzrny15e_cpX19U2_2la2mrtFLFNgbSgN7xKtDWfHlrxE9lCbd03WXO6qCeYfdQNfS2VbvsNwnCXfi-1UpDJBB_yv5RsrMJlEYs3E8OuX60gtiLnTYwB52n0FVCZpSzMuK5fz41xW31K5g4wPEyXKa3iQ8MAXi4hXvh0X7DK9ovzAOZ_Cj284NvwtiZkrqxhbOVHoRG2TUKiABBP5c-3wIF8hXeXHP3Uc8fugzFCEwvjrh2daEAMheJvK55eujuieZ78IWhO1ByAB8o3QTbqrgxKlw",
-									"type": "string"
+									"key": "",
+									"value": "",
+									"disabled": true
 								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"sessionId\": \"16391630454473614036488097242876\"\r\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-params/api/params/getIdentificationTypes",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-params",
-								"api",
-								"params",
-								"getIdentificationTypes"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Profiles",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNjMwNTAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE2NjY1MCwiaWF0IjoxNjM5MTYzMDUwLCJ2ZXJzaW9uIjoyLCJqdGkiOiI4YzA5MGQwMy00MmQ5LTRiMTQtODhhMS0yMmJkOTdlMDMyMDAiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.YuMPQoiQFFI1VlgBd3XIkmCXK7i4fjxCN5oaaQDkwLTzIpz3fkoBLbDwcg77Nzrny15e_cpX19U2_2la2mrtFLFNgbSgN7xKtDWfHlrxE9lCbd03WXO6qCeYfdQNfS2VbvsNwnCXfi-1UpDJBB_yv5RsrMJlEYs3E8OuX60gtiLnTYwB52n0FVCZpSzMuK5fz41xW31K5g4wPEyXKa3iQ8MAXi4hXvh0X7DK9ovzAOZ_Cj284NvwtiZkrqxhbOVHoRG2TUKiABBP5c-3wIF8hXeXHP3Uc8fugzFCEwvjrh2daEAMheJvK55eujuieZ78IWhO1ByAB8o3QTbqrgxKlw",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"sessionId\": \"16391630454473614036488097242876\"\r\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-params/api/params/getProfiles",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-params",
-								"api",
-								"params",
-								"getProfiles"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "RecordOrigins",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNjMwNTAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE2NjY1MCwiaWF0IjoxNjM5MTYzMDUwLCJ2ZXJzaW9uIjoyLCJqdGkiOiI4YzA5MGQwMy00MmQ5LTRiMTQtODhhMS0yMmJkOTdlMDMyMDAiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.YuMPQoiQFFI1VlgBd3XIkmCXK7i4fjxCN5oaaQDkwLTzIpz3fkoBLbDwcg77Nzrny15e_cpX19U2_2la2mrtFLFNgbSgN7xKtDWfHlrxE9lCbd03WXO6qCeYfdQNfS2VbvsNwnCXfi-1UpDJBB_yv5RsrMJlEYs3E8OuX60gtiLnTYwB52n0FVCZpSzMuK5fz41xW31K5g4wPEyXKa3iQ8MAXi4hXvh0X7DK9ovzAOZ_Cj284NvwtiZkrqxhbOVHoRG2TUKiABBP5c-3wIF8hXeXHP3Uc8fugzFCEwvjrh2daEAMheJvK55eujuieZ78IWhO1ByAB8o3QTbqrgxKlw",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"sessionId\": \"16391630454473614036488097242876\"\r\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-params/api/params/getRecordOrigins",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-params",
-								"api",
-								"params",
-								"getRecordOrigins"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "StateTypes",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNjMwNTAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE2NjY1MCwiaWF0IjoxNjM5MTYzMDUwLCJ2ZXJzaW9uIjoyLCJqdGkiOiI4YzA5MGQwMy00MmQ5LTRiMTQtODhhMS0yMmJkOTdlMDMyMDAiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.YuMPQoiQFFI1VlgBd3XIkmCXK7i4fjxCN5oaaQDkwLTzIpz3fkoBLbDwcg77Nzrny15e_cpX19U2_2la2mrtFLFNgbSgN7xKtDWfHlrxE9lCbd03WXO6qCeYfdQNfS2VbvsNwnCXfi-1UpDJBB_yv5RsrMJlEYs3E8OuX60gtiLnTYwB52n0FVCZpSzMuK5fz41xW31K5g4wPEyXKa3iQ8MAXi4hXvh0X7DK9ovzAOZ_Cj284NvwtiZkrqxhbOVHoRG2TUKiABBP5c-3wIF8hXeXHP3Uc8fugzFCEwvjrh2daEAMheJvK55eujuieZ78IWhO1ByAB8o3QTbqrgxKlw",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"sessionId\": \"16391630454473614036488097242876\"\r\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-params/api/params/getStateTypes",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-params",
-								"api",
-								"params",
-								"getStateTypes"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "TradeCategories",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJraWQiOiIyXC9cL3M2aGJBbU1obFk2eWJyMkU1a0VjeXpGR0l5dVppUDlIaWRyTVg4TnM9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoibGFiLW1iYWFzXC9hdGgtcDJtIGh0dHBzOlwvXC9sYWItdnNzaDIudmFsaWRzb2x1dGlvbnMuY29tLmJyXC9jb21tZXJjZSBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvcGVyc29uIGxhYi1tYmFhc1wvY29tbXVuaWNhdGlvbiBsYWItbWJhYXNcL2xvZ2luIGxhYi1tYmFhc1wvY29tbWVyY2UgbGFiLW1iYWFzXC9wZXJzb24gbGFiLW1iYWFzXC9hZG1pbiBodHRwczpcL1wvbGFiLXZzc2gyLnZhbGlkc29sdXRpb25zLmNvbS5iclwvYWRtaW4iLCJhdXRoX3RpbWUiOjE2MzkxNjMwNTAsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX2wxNlAzZ05QUyIsImV4cCI6MTYzOTE2NjY1MCwiaWF0IjoxNjM5MTYzMDUwLCJ2ZXJzaW9uIjoyLCJqdGkiOiI4YzA5MGQwMy00MmQ5LTRiMTQtODhhMS0yMmJkOTdlMDMyMDAiLCJjbGllbnRfaWQiOiI0N2VpcWJubnRhcjUwa28zMDhkMmptaW05ciJ9.YuMPQoiQFFI1VlgBd3XIkmCXK7i4fjxCN5oaaQDkwLTzIpz3fkoBLbDwcg77Nzrny15e_cpX19U2_2la2mrtFLFNgbSgN7xKtDWfHlrxE9lCbd03WXO6qCeYfdQNfS2VbvsNwnCXfi-1UpDJBB_yv5RsrMJlEYs3E8OuX60gtiLnTYwB52n0FVCZpSzMuK5fz41xW31K5g4wPEyXKa3iQ8MAXi4hXvh0X7DK9ovzAOZ_Cj284NvwtiZkrqxhbOVHoRG2TUKiABBP5c-3wIF8hXeXHP3Uc8fugzFCEwvjrh2daEAMheJvK55eujuieZ78IWhO1ByAB8o3QTbqrgxKlw",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"sessionId\": \"16391630454473614036488097242876\"\r\n}"
-						},
-						"url": {
-							"raw": "{{URL_BASE}}/rbm-instant-payments-params/api/params/getTradeCategories",
-							"host": [
-								"{{URL_BASE}}"
-							],
-							"path": [
-								"rbm-instant-payments-params",
-								"api",
-								"params",
-								"getTradeCategories"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "InitParams",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"sessionId\": {{sessionId}}\r\n}"
-						},
-						"url": {
-							"raw": "{{URL}}/rbm-instant-payments-params/params/initParams",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"rbm-instant-payments-params",
-								"params",
-								"initParams"
 							]
 						}
 					},
